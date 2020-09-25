@@ -8,8 +8,8 @@ namespace Bakery.Tests
   {
     [TestMethod]
        public void getCost_ReturnCost_int(){
-        Bread bread = new Bread();
-        Assert.AreEqual(25,Bread.getCost());
+        Bread bread = new Bread(7);
+        Assert.AreEqual(25,bread.getCost());
        //Assert.AreEqual("nineteen",Words.getNumWordRecursive(999999999999));
       }
   }
