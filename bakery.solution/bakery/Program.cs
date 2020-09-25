@@ -20,8 +20,8 @@ namespace Bakery
         switch (line.ToLower())
         {
             case "menu":
-              Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $5.");
-              Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5.");
+              Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $5 or buy 10 for $28. ");
+              Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5 or buy 10 for $14.");
               break;
             case "order":
               Console.WriteLine("Enter amount of Pasteries you want to buy:");
@@ -43,7 +43,7 @@ namespace Bakery
             case "buy":
               if(orderCost > 0)
               {
-                Console.WriteLine("Thank you for your order of:");
+                Console.WriteLine("Thank you for your purchase of:");
                 Console.WriteLine("You order has {0} Bread", numBread);
                 Console.WriteLine("You order has {0} Pasteries", numPasteries);
                 Console.WriteLine("Total Cost ${0} ", orderCost);
