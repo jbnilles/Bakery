@@ -35,6 +35,18 @@ namespace Bakery
               Console.WriteLine("You ordered {0} Bread", numBread);
               Console.WriteLine("You ordered {0} Pasteries", numPasteries);
               Console.WriteLine("Total Cost ${0} ", orderCost);
+              Console.WriteLine();
+              Console.WriteLine("Type edit to change order or type buy to complete order and purchase.", orderCost);
+              if((line = Console.ReadLine()).ToLower() == "order")
+              {
+                Console.WriteLine("order");
+              }
+              else if (line == "buy")
+              {
+                Console.WriteLine("buy");
+              }
+              
+              
             }
             else
             {
