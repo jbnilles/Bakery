@@ -8,30 +8,40 @@ namespace Bakery.Models
   {
     public int OrderCost { get; set; }
     public int AmountBread { get; set; }
-    public int AmountPasdtries { get; set; }
+    public int AmountPastries { get; set; }
     private List <Bread> breadOrders;
     private List <Pastery> pasteryOrders;
+    public Orders()
+    {
+      breadOrders = new List<Bread>();
+      pasteryOrders = new List<Pastery>();
+    }
     public void addBreadOrder(Bread b)
     {
       breadOrders.Add(b);
+      AmountBread++;
     }
     public void addPasteryOrder(Pastery p)
     {
       pasteryOrders.Add(p);
+      AmountPasdtries++;
     }
     public List<Bread> getBreadOrderList()
     {
+      AmountBread--;
       return breadOrders;
+
     }
-    public List<Pastery> getBreadOrderList()
+    public List<Pastery> getPasteryOrderList()
     {
+      AmountPastries--;
       return pasteryOrders;
     }
-    public Bread removeBreadListItem(Bread b)
+    public void removeBreadListItem(Bread b)
     {
       breadOrders.Remove(b);
     }
-    public Pastery removePasteryListItem(Pastery p)
+    public void removePasteryListItem(Pastery p)
     {
       pasteryOrders.Remove(p);
     }

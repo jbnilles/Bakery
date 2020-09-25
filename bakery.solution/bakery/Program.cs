@@ -8,7 +8,10 @@ namespace Bakery
   {
      public static void Main() 
     {
+      Bread bread;
+      Pastery pastery;
       string line = "";
+      Orders orders = new Orders();
       int numBread = 0;
       int numPasteries = 0;
       int orderCost = 0;
@@ -30,8 +33,8 @@ namespace Bakery
               string strBread = Console.ReadLine();
               if(int.TryParse(strBread, out numBread) && int.TryParse(strPasteries, out numPasteries))
               {
-                Bread bread = new Bread(numBread);
-                Pastery  pastery = new Pastery(numPasteries);
+                bread = new Bread(numBread);
+                pastery = new Pastery(numPasteries);
                 orderCost = bread.getCost() + pastery.getCost();
                 Console.WriteLine("You order has {0} Bread", numBread);
                 Console.WriteLine("You order has {0} Pasteries", numPasteries);
@@ -47,6 +50,7 @@ namespace Bakery
                 Console.WriteLine("You order has {0} Bread", numBread);
                 Console.WriteLine("You order has {0} Pasteries", numPasteries);
                 Console.WriteLine("Total Cost ${0} ", orderCost);
+                
                 numBread = 0;
                 numPasteries = 0;
                 orderCost = 0;
@@ -59,6 +63,7 @@ namespace Bakery
               }
               
             case "exit":
+            
               break;
             default:
               Console.WriteLine("There was an error in your input. Please try again.");
