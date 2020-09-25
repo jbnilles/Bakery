@@ -8,8 +8,8 @@ namespace Bakery
   {
      public static void Main() 
     {
-      Bread bread;
-      Pastery pastery;
+      Bread bread = null;
+      Pastery pastery = null;
       string line = "";
       Orders orders = new Orders();
       int numBread = 0;
@@ -27,6 +27,7 @@ namespace Bakery
               Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5 or buy 10 for $14.");
               break;
             case "order":
+              Console.WriteLine("Current order has {0} loaves of Bread and {1} Pastery",numBread,numPasteries);
               Console.WriteLine("Enter amount of Pasteries you want to buy:");
               string strPasteries = Console.ReadLine();
               Console.WriteLine("Enter amount of Bread you want to buy:");
@@ -36,8 +37,8 @@ namespace Bakery
                 bread = new Bread(numBread);
                 pastery = new Pastery(numPasteries);
                 orderCost = bread.getCost() + pastery.getCost();
-                Console.WriteLine("You order has {0} Bread", numBread);
-                Console.WriteLine("You order has {0} Pasteries", numPasteries);
+                Console.WriteLine("Your order has {0} Bread", numBread);
+                Console.WriteLine("Your order has {0} Pasteries", numPasteries);
                 Console.WriteLine("Total Cost ${0} ", orderCost);
                 Console.WriteLine();
                 break;
@@ -50,6 +51,8 @@ namespace Bakery
                 Console.WriteLine("You order has {0} Bread", numBread);
                 Console.WriteLine("You order has {0} Pasteries", numPasteries);
                 Console.WriteLine("Total Cost ${0} ", orderCost);
+                orders.addBreadOrder(bread);
+                orders.addPasteryOrder(pastery);
                 
                 numBread = 0;
                 numPasteries = 0;
@@ -64,6 +67,7 @@ namespace Bakery
               
             case "exit":
             
+              Console.WriteLine("Thank you for using this Program. You made {0} orders.",orders.AmountPastries);
               break;
             default:
               Console.WriteLine("There was an error in your input. Please try again.");

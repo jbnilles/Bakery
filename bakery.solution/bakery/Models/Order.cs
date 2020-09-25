@@ -24,7 +24,7 @@ namespace Bakery.Models
     public void addPasteryOrder(Pastery p)
     {
       pasteryOrders.Add(p);
-      AmountPasdtries++;
+      AmountPastries++;
     }
     public List<Bread> getBreadOrderList()
     {

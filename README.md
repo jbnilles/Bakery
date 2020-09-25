@@ -6,7 +6,7 @@
 
 ## Description
 
-_This program is a console program that allows the user to enter how many Pasteries and Bread the user wants and then it will return the cost of those items. The program will also display the menu in the console before the user is prompeted to enter their order._
+_This program is a console program that allows the user to enter how many Pasteries and Bread the user wants and then it will return the cost of those items. The program will also display the menu in the console before the user is prompeted to enter their order. This program has functionality to account for many user errors at different stages in the program. It checks if the user enters a proper value when prompted it checks if the user enters a proper integer when prompted and if the user enters incorrect responses it will give the user an error message and then the user will have another chance to enter the info._
 
 ### Specs
 | Spec | Input | Output |
