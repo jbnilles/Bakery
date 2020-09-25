@@ -9,7 +9,7 @@ namespace Bakery
      public static void Main() 
     {
       string line = "";
-      Console.WriteLine("Welcome to Pierre's Bakery! Type Menu to bring up the menu, type order to place order or Type exit to exit the program")
+      Console.WriteLine("Welcome to Pierre's Bakery! Type Menu to bring up the menu, type order to place order or Type exit to exit the program");
       while((line = Console.ReadLine()).ToLower() != "exit")
       {
         if(line.ToLower() == "menu")
@@ -23,21 +23,38 @@ namespace Bakery
           string strBread = Console.ReadLine();
           int numBread;
           int numPasteries;
-          if(int.TryParse(strBread, numBread))
+          if(int.TryParse(strBread, out numBread))
           {
             Console.WriteLine("Enter number of Pasteries:");
             string strPasteries = Console.ReadLine();
-            if(int.TryParse(strPasteries, numPasteries))
+            if(int.TryParse(strPasteries, out numPasteries))
             {
-
+              Bread bread = new Bread(numBread);
+              Pastery  pastery = new Pastery(numPasteries);
+              int orderCost = bread.getCost() + pastery.getCost();
+              Console.WriteLine("You ordered {0} Bread", numBread);
+              Console.WriteLine("You ordered {0} Pasteries", numPasteries);
+              Console.WriteLine("Total Cost ${0} ", orderCost);
+            }
+            else
+            {
+              Console.WriteLine("There was an error in your input. Please try again.");
+              Console.WriteLine(" Type Menu to bring up the menu, type order to place order or Type exit to exit the program");
             }
           }
-          else{
-
+          else
+          {
+            Console.WriteLine("There was an error in your input. Please try again.");
+            Console.WriteLine(" Type Menu to bring up the menu, type order to place order or Type exit to exit the program");
           }
           
 
         }
+        else
+          {
+            Console.WriteLine("There was an error in your input. Please try again.");
+            Console.WriteLine(" Type Menu to bring up the menu, type order to place order or Type exit to exit the program");
+          }
       }
     } 
   }
