@@ -6,57 +6,93 @@ namespace Bakery
 {
   public class Program
   {
+    public static void printMenu()
+    {
+      Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $5 or buy 10 for $28. ");
+      Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5 or buy 10 for $14.");
+      return;
+    }
+    public static Bread getBreadOrder()
+    {
+      int numBread;
+      Console.WriteLine("Enter amount of Bread you want to buy:");
+      string strBread = Console.ReadLine();
+      if(int.TryParse(strBread, out numBread))
+      {
+        return new Bread(numBread);
+      }
+      return null;
+    }
+    public static Pastery getPasteryOrder()
+    {
+      int numPasteries = 0;
+      Console.WriteLine("Enter amount of Pasteries you want to buy:");
+      string strPasteries = Console.ReadLine();
+      Console.WriteLine("pastery::::{0}",strPasteries);
+      if(int.TryParse(strPasteries, out numPasteries))
+      {
+        Console.WriteLine("pastery::::{0}",numPasteries);
+        return new Pastery(numPasteries);
+      }
+      return null;
+    }
+    public static void writePreOrderDetails(Bread b, Pastery p)
+    {
+      Console.WriteLine("pastery::::{0}",p.Amount);
+
+      Console.WriteLine("Your order has {0} Bread", b.Amount);
+      Console.WriteLine("Your order has {0} Pasteries", p.Amount);
+      Console.WriteLine("Total Cost ${0} ", b.getCost() + p.getCost());
+      Console.WriteLine();
+    }
+    public static void writeAllOrdersDetails()
+    {
+      Console.WriteLine("You made a total of {0} Orders", Orders.OrdersList.Count);
+      int i = 1;
+      foreach (Orders order in Orders.OrdersList)
+      {
+        Console.WriteLine("Order {0}: ", i);
+        Console.WriteLine("Amount of bread: {0} ", order.getBreadOrder().Amount);
+        Console.WriteLine("Amount of pasteries: {0} ", order.getPasteryOrder().Amount);
+        Console.WriteLine("Cost: ${0} ", order.OrderCost);
+        i++;
+      }
+    }
+    
      public static void Main() 
     {
+      string line = "";
       Bread bread = null;
       Pastery pastery = null;
-      string line = "";
-      Orders orders = new Orders();
-      int numBread = 0;
-      int numPasteries = 0;
-      int orderCost = 0;
       Console.WriteLine("Welcome to Pierre's Bakery!");
       while (line.ToLower() != "exit")
       {
+        
         Console.WriteLine("Enter 'menu' to bring up the menu, enter 'order' to begin/edit your order, enter 'buy' to complete purchase or enter 'exit' to exit the program");
         line = Console.ReadLine();
         switch (line.ToLower())
         {
             case "menu":
-              Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $5 or buy 10 for $28. ");
-              Console.WriteLine("Pastry: Buy 1 for $2 or 3 for $5 or buy 10 for $14.");
+              printMenu();
               break;
             case "order":
-              Console.WriteLine("Current order has {0} loaves of Bread and {1} Pastery",numBread,numPasteries);
-              Console.WriteLine("Enter amount of Pasteries you want to buy:");
-              string strPasteries = Console.ReadLine();
-              Console.WriteLine("Enter amount of Bread you want to buy:");
-              string strBread = Console.ReadLine();
-              if(int.TryParse(strBread, out numBread) && int.TryParse(strPasteries, out numPasteries))
+              bread = getBreadOrder();
+              pastery = getPasteryOrder();
+              if(bread == null || pastery == null)
               {
-                bread = new Bread(numBread);
-                pastery = new Pastery(numPasteries);
-                orderCost = bread.getCost() + pastery.getCost();
-                Console.WriteLine("Your order has {0} Bread", numBread);
-                Console.WriteLine("Your order has {0} Pasteries", numPasteries);
-                Console.WriteLine("Total Cost ${0} ", orderCost);
-                Console.WriteLine();
-                break;
+                goto default;
               }
-              goto default;
+              writePreOrderDetails(bread, pastery);
+              break;
+              
             case "buy":
-              if(orderCost > 0)
+              if(bread != null && pastery != null)
               {
-                Console.WriteLine("Thank you for your purchase of:");
-                Console.WriteLine("You order has {0} Bread", numBread);
-                Console.WriteLine("You order has {0} Pasteries", numPasteries);
-                Console.WriteLine("Total Cost ${0} ", orderCost);
-                orders.addBreadOrder(bread);
-                orders.addPasteryOrder(pastery);
-                
-                numBread = 0;
-                numPasteries = 0;
-                orderCost = 0;
+                Console.WriteLine("Thank You For Your Puchase Of:");
+                writePreOrderDetails(bread, pastery);
+                new Orders(bread, pastery);
+                bread = null;
+                pastery = null;
                 break;
               }
               else
@@ -66,9 +102,9 @@ namespace Bakery
               }
               
             case "exit":
-            
-              Console.WriteLine("Thank you for using this Program. You made {0} orders.",orders.AmountPastries);
+              writeAllOrdersDetails();
               break;
+              
             default:
               Console.WriteLine("There was an error in your input. Please try again.");
               break;

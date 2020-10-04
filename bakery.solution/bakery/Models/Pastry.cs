@@ -12,10 +12,11 @@ namespace Bakery.Models
     }
       public int getCost()
       {
-        int cost = (Amount/10) * 14;
-        Amount %= 10;
-        cost += (Amount / 3) * 5;
-        cost += (Amount % 3) * 2;
+        int amount = Amount;
+        int cost = (amount/10) * 14;
+        amount %= 10;
+        cost += (amount / 3) * 5;
+        cost += (amount % 3) * 2;
         return cost;
       }
   }

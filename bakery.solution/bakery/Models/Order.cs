@@ -7,43 +7,44 @@ namespace Bakery.Models
   public class Orders
   {
     public int OrderCost { get; set; }
-    public int AmountBread { get; set; }
-    public int AmountPastries { get; set; }
-    private List <Bread> breadOrders;
-    private List <Pastery> pasteryOrders;
-    public Orders()
+    
+    public static List<Orders> OrdersList = new List<Orders>{};
+    private Bread breadOrder;
+    private Pastery pasteryOrder;
+    public Orders(Bread b, Pastery p)
     {
-      breadOrders = new List<Bread>();
-      pasteryOrders = new List<Pastery>();
+      breadOrder = b;
+      pasteryOrder = p;
+      UpdateOrderCost();
+      OrdersList.Add(this);
     }
-    public void addBreadOrder(Bread b)
+    private void UpdateOrderCost()
     {
-      breadOrders.Add(b);
-      AmountBread++;
+      OrderCost = breadOrder.getCost() + pasteryOrder.getCost();
     }
-    public void addPasteryOrder(Pastery p)
+    public void EditBreadOrder(Bread b)
     {
-      pasteryOrders.Add(p);
-      AmountPastries++;
+      breadOrder = b;
+      UpdateOrderCost();
     }
-    public List<Bread> getBreadOrderList()
+    public void EditPasteryOrder(Pastery p)
     {
-      AmountBread--;
-      return breadOrders;
+      pasteryOrder = p;
+      UpdateOrderCost();
+    }
+    public Bread getBreadOrder()
+    {
+      return breadOrder;
 
     }
-    public List<Pastery> getPasteryOrderList()
+    public Pastery getPasteryOrder()
     {
-      AmountPastries--;
-      return pasteryOrders;
+      return pasteryOrder;
     }
-    public void removeBreadListItem(Bread b)
+    public static void RemoveOrder(Orders o)
     {
-      breadOrders.Remove(b);
+      OrdersList.Remove(o);
     }
-    public void removePasteryListItem(Pastery p)
-    {
-      pasteryOrders.Remove(p);
-    }
+    
   }
 }
