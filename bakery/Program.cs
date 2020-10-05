@@ -28,17 +28,14 @@ namespace Bakery
       int numPasteries = 0;
       Console.WriteLine("Enter amount of Pasteries you want to buy:");
       string strPasteries = Console.ReadLine();
-      Console.WriteLine("pastery::::{0}",strPasteries);
       if(int.TryParse(strPasteries, out numPasteries))
       {
-        Console.WriteLine("pastery::::{0}",numPasteries);
         return new Pastery(numPasteries);
       }
       return null;
     }
     public static void writePreOrderDetails(Bread b, Pastery p)
     {
-      Console.WriteLine("pastery::::{0}",p.Amount);
 
       Console.WriteLine("Your order has {0} Bread", b.Amount);
       Console.WriteLine("Your order has {0} Pasteries", p.Amount);

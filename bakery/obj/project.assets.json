@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj",
+      "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj",
       "projectName": "bakery",
-      "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj",
+      "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj",
       "packagesPath": "C:\\Users\\bnilles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\obj\\",
+      "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

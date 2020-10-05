@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj": {}
+    "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\Bakery\\bakery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj": {
+    "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\Bakery\\bakery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj",
+        "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\Bakery\\bakery.csproj",
         "projectName": "bakery",
-        "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj",
+        "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\Bakery\\bakery.csproj",
         "packagesPath": "C:\\Users\\bnilles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\obj\\",
+        "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\Bakery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

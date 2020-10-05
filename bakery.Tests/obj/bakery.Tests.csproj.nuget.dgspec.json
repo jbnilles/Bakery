@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery.Tests\\bakery.Tests.csproj": {}
+    "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery.Tests\\bakery.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery.Tests\\bakery.Tests.csproj": {
+    "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery.Tests\\bakery.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery.Tests\\bakery.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery.Tests\\bakery.Tests.csproj",
         "projectName": "bakery.Tests",
-        "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery.Tests\\bakery.Tests.csproj",
+        "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery.Tests\\bakery.Tests.csproj",
         "packagesPath": "C:\\Users\\bnilles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery.Tests\\obj\\",
+        "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj": {
-                "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj"
+              "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj": {
+                "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj": {
+    "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj",
+        "projectUniqueName": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj",
         "projectName": "bakery",
-        "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\bakery.csproj",
+        "projectPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\bakery.csproj",
         "packagesPath": "C:\\Users\\bnilles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Pierres'sBakery\\bakery.solution\\bakery\\obj\\",
+        "outputPath": "C:\\Users\\bnilles\\Desktop\\epi\\Bakery.Solution\\bakery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
